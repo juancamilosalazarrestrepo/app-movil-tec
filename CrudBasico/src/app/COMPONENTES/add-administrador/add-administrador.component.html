@@ -1,0 +1,77 @@
+<p>Agregar Administrador</p>
+
+<div class="container">
+    <p>Agregar Administrador</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                 
+                <div class="mb-3">
+                    <label class="form-label">Nombre de usuario</label>
+                    <input [(ngModel)]="administrador.username" type="text" class="form-control" name="username">
+
+
+                </div>
+                <div>
+
+                    <label class="form-label">Correo</label>
+                    <input [(ngModel)]="administrador.correo" type="text" class="form-control" name="correo">
+
+                </div>
+
+                <div>
+
+                    <label class="form-label">Contraseña</label>
+                    <input [(ngModel)]="administrador.password_user" type="text" class="form-control" name="password_user">
+
+                </div>
+               
+
+                <button (click)="agregarAdministrador()" class="btn btn-primary">Agregar Administrador</button>
+
+
+            </form>
+
+        </div>
+        <div class="col-sm-6">
+            <form>
+                 <div>
+
+                    <label class="form-label">{{administrador.id_user}}</label>
+
+
+                </div> 
+
+                <div>
+
+                    <label class="form-label">{{administrador.username}}</label>
+
+
+                </div>
+
+                <div>
+
+                    <label class="form-label">{{administrador.password_user}}</label>
+
+
+                </div>
+                <div>
+
+                    <label class="form-label">{{administrador.correo}}</label>
+
+
+                </div>
+
+
+                
+
+
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<p>Agregar Reparacion</p>
+
+<div class="container">
+    <p>Agregar Reparacion</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">ID Del movil</label>
+                    <input [(ngModel)]="reparacion.id_movil" type="number" value="4"  class="form-control" name="id_movil">
+
+
+                </div> 
+                <div class="mb-3">
+                    <label class="form-label">Descripcion</label>
+                    <input [(ngModel)]="reparacion.descripcion" type="text" class="form-control" name="descripcion">
+
+
+                </div>
+
+                
+               
+
+                <button (click)="agregarReparacion()" class="btn btn-primary">Agregar reparacion</button>
+
+
+            </form>
+
+        </div>
+        <div class="col-sm-6">
+            <form>
+                 <div>
+
+                    <label class="form-label">{{reparacion.id_movil}}</label>
+
+
+                </div> 
+
+                <div>
+
+                    <label class="form-label">{{reparacion.descripcion}}</label>
+
+
+                </div>
+
+
+                
+
+
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+</div>
+

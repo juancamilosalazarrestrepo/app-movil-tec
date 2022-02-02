@@ -1,0 +1,38 @@
+<div class="container">
+
+    <p>Lista de Clientes</p>
+  
+    
+    <button routerLink="/addAdministrador" type="button" class="btn btn-dark">Agregar Administrador</button>
+    
+  
+   
+    <label >Lista de Administradores</label>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id Administrador</th>
+          <th scope="col">Nombre de usuario</th>
+          <th scope="col">contraseña</th>
+          <th scope="col">correo</th>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let administrador of ListarAdministradores">
+          <th>{{administrador.id_user}}</th>
+          <td>{{administrador.username}}</td>
+          <td>{{administrador.password_user}}</td>
+          <td>{{administrador.correo}}</td>
+          
+          
+         
+        </tr>
+  
+      </tbody>
+    </table>
+  
+  
+  
+  </div>

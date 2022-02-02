@@ -9,13 +9,21 @@ import { ModificarComponent } from './COMPONENTES/modificar/modificar.component'
 
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
+import { AddMovilComponent } from './COMPONENTES/add-movil/add-movil.component';
+import { AddReparacionesComponent } from './COMPONENTES/add-reparaciones/add-reparaciones.component';
+import { AddAdministradorComponent } from './COMPONENTES/add-administrador/add-administrador.component';
+import { UsuariosComponent } from './COMPONENTES/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     AgregarComponent,
-    ModificarComponent
+    ModificarComponent,
+    AddMovilComponent,
+    AddReparacionesComponent,
+    AddAdministradorComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,

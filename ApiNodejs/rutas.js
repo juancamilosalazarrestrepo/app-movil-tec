@@ -5,10 +5,10 @@ const conexion= require('./config/conexion')
 
 
 //asignamos todas las rutas
-//get equipos
+//get clientes
 
 router.get('/',(req,res)=>{
-    let sql = 'select * from tb_equipo'
+    let sql = 'select * from tb_clientes'
 
     conexion.query(sql,(err,rows,fields)=>{
         if(err) throw err;
@@ -23,7 +23,7 @@ router.get('/',(req,res)=>{
 
 router.get('/:id',(req,res)=>{
     const {id}=req.params
-    let sql = 'select * from tb_equipo where id_equipo = ?'
+    let sql = 'select * from tb_clientes where id_clientes = ?'
     conexion.query(sql,[id],(err,rows,fields)=>{
         if(err) throw err;
         else{
@@ -36,12 +36,15 @@ router.get('/:id',(req,res)=>{
 //agregar equipo
 
 router.post('/',(req,res)=>{
-    const{nombre,logo}= req.body
-    let sql = `insert into tb_equipo(nombre, logo) values('${nombre}','${logo}')`
+    const{nombre}= req.body
+    const{telefono}=req.body
+    const{correo}=req.body
+    const{cedula}=req.body
+    let sql = `insert into tb_clientes(nombre, telefono, correo, cedula) values('${nombre}','${telefono}','${correo}','${cedula}')`
     conexion.query(sql,(err, rows,fields)=>{
         if(err) throw err
         else{
-            res.json({status: 'equipo agregado'})
+            res.json({status: 'cliente agregado'})
         }
     })
 })
@@ -50,7 +53,7 @@ router.post('/',(req,res)=>{
 
 router.delete('/:id',(req,res)=>{
     const{id}=req.params
-    let sql = `delete from tb_equipo where id_equipo = '${id}'`
+    let sql = `delete from tb_clientes where id_clientes = '${id}'`
     conexion.query(sql,(err, rows,fields)=>{
         if(err) throw err
         else{
@@ -67,16 +70,18 @@ router.delete('/:id',(req,res)=>{
 
 router.put('/:id',(req,res)=>{
     const{id}=req.params
-    const{nombre, logo} = req.body
-    let sql =`update tb_equipo set
+    const{nombre, telefono, correo, cedula} = req.body
+    let sql =`update tb_clientes set
     nombre ='${nombre}',
-    logo='${logo}'
-    where id_equipo = '${id}'`
+    telefono ='${telefono}',
+    correo ='${correo}',
+    cedula ='${cedula}'
+    where id_clientes = '${id}'`
 
     conexion.query(sql, (err, rows,fields)=>{
         if(err) throw err
         else{
-            res.json({status:'equipo modificado'})
+            res.json({status:'cliente modificado'})
         }
     })
 })

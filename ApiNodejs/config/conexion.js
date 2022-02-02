@@ -4,7 +4,7 @@ const conexion = mysql.createConnection({
     user: 'root',
     password: 'password',
     port:3306,
-    database: 'db_basico',
+    database: 'db_sertec',
     insecureAuth : true
 });
 

@@ -3,52 +3,77 @@
 <div class="container">
     <p>Agregar Equipo</p>
     <div class="row">
-    <div class="col-sm-6">
-        <form>
-            <div class="mb-3">
-                <label class="form-label">Nombre de Equipo</label>
-                <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
-    
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre de Equipo</label>
+                    <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
 
-            </div>
 
-            <div>
+                </div>
 
-                <label class="form-label">logo</label>
-                <input [(ngModel)]="equipo.logo" type="text" class="form-control" name="logo">
+                <div>
 
-            </div>
+                    <label class="form-label">telefono</label>
+                    <input [(ngModel)]="equipo.telefono" type="text" class="form-control" name="telefono">
 
-            <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+                </div>
+                <div>
 
-           
-        </form>
+                    <label class="form-label">correo</label>
+                    <input [(ngModel)]="equipo.correo" type="text" class="form-control" name="correo">
+
+                </div>
+                <div>
+
+                    <label class="form-label">cedula</label>
+                    <input [(ngModel)]="equipo.cedula" type="text" class="form-control" name="cedula">
+
+                </div>
+
+                <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+
+
+            </form>
+
+        </div>
+        <div class="col-sm-6">
+            <form>
+
+
+                <div>
+
+                    <label class="form-label">{{equipo.nombre}}</label>
+
+
+                </div>
+                <div>
+
+                    <label class="form-label">{{equipo.telefono}}</label>
+
+
+                </div>
+                <div>
+
+                    <label class="form-label">{{equipo.correo}}</label>
+
+
+                </div>
+                <div>
+
+                    <label class="form-label">{{equipo.cedula}}</label>
+
+
+                </div>
+
+
+
+
+            </form>
+
+        </div>
+
+
 
     </div>
-    <div class="col-sm-6">
-        <form>
-            <div class="mb-3">
-               <img src="{{equipo.logo}}"  width="100px" height="100px" alt="">
-                
-    
-
-            </div>
-
-            <div>
-
-                <label class="form-label">{{equipo.nombre}}</label>
-                
-
-            </div>
-
-            
-
-           
-        </form>
-
-    </div>
-
-
-
-</div>
 </div>

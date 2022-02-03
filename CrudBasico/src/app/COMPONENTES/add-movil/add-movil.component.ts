@@ -37,6 +37,7 @@ export class AddMovilComponent implements OnInit {
     if (id_entrada) {
       this.EquipoService.getUnEquipo(id_entrada).subscribe(
         res => {
+          
           this.equipo = <any>res[0];
           
         },

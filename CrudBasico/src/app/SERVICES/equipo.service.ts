@@ -79,6 +79,11 @@ export class EquipoService {
   }
 
 
+  /* login(username:string,usuario: Usuario) {
+    return this.http.get(this.url + '/log' + username, usuario);
+  }
+ */
+
 }
 
 export interface Equipo {
@@ -114,6 +119,13 @@ export interface Administrador {
   username?: string;
   password_user?: string;
   correo?:string;
+  
+}
+
+export interface Usuario {
+  username?: string;
+  password_user?: string;
+ 
   
 }
 

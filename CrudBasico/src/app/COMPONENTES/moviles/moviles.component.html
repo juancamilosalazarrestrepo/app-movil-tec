@@ -1,0 +1,68 @@
+<div class="dashboard">
+    <div class="sidebar">
+        <h2>Agregar items</h2>
+       <button routerLink="/add" type="button" class="btn btn-dark boton">Agregar Nuevo cliente</button>
+       <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton">Agregar Administrador</button>
+       <h2>Listas</h2>
+       <button routerLink="/administradores" type="button" class="btn btn-dark boton">Lista de Administradores</button>
+       <button routerLink="/moviles" type="button" class="btn btn-dark boton">Lista de Moviles</button>
+       <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de reparaciones</button>
+      
+       
+      
+      
+      </div>
+    
+    
+    <div class="container">
+    
+      
+    
+      
+    
+     
+      
+    <div class="containerTable">
+    
+        <label >Lista de equipos moviles</label>
+    
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id movil</th>
+              <th scope="col">id cliente</th>
+              <th scope="col">marca</th>
+              <th scope="col">modelo</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movil of ListarMovil">
+              <th>{{movil.id_movil}}</th>
+              <td>{{movil.id_clientes}}</td>
+              <td>{{movil.marca}}</td>
+              <td>{{movil.modelo}}</td>
+              <td>
+                <button (click)="agregarReparacion(movil.id_movil ||'')"type="button" class="btn btn-primary">Agregar Reparacion</button>
+              </td>
+              
+             
+            </tr>
+      
+          </tbody>
+        </table>
+    
+    </div>
+    
+      
+    
+    
+      
+    
+     
+    
+    
+    
+    </div>
+    
+    </div>

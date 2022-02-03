@@ -13,6 +13,9 @@ import { AddMovilComponent } from './COMPONENTES/add-movil/add-movil.component';
 import { AddReparacionesComponent } from './COMPONENTES/add-reparaciones/add-reparaciones.component';
 import { AddAdministradorComponent } from './COMPONENTES/add-administrador/add-administrador.component';
 import { UsuariosComponent } from './COMPONENTES/usuarios/usuarios.component';
+import { LoginComponent } from './COMPONENTES/login/login.component';
+import { ReparacionesComponent } from './COMPONENTES/reparaciones/reparaciones.component';
+import { MovilesComponent } from './COMPONENTES/moviles/moviles.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { UsuariosComponent } from './COMPONENTES/usuarios/usuarios.component';
     AddMovilComponent,
     AddReparacionesComponent,
     AddAdministradorComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    LoginComponent,
+    ReparacionesComponent,
+    MovilesComponent
   ],
   imports: [
     BrowserModule,

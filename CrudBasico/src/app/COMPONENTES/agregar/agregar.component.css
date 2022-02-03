@@ -1,0 +1,38 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding-top: 30px;
+    width: 15%;
+    height: 100vh;
+    background-color: #212529;
+    color: #0077c0;
+}
+
+.boton{
+    width: 90% !important;
+    margin: 10px 0;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.dashboard{
+    display: flex;
+}
+
+
+
+ .containerTable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 1000px;
+    background-color: #ffffff !important;
+    padding: 40px !important;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 24px 4px rgba(0,0,0,0.32); 
+box-shadow: 0px 3px 24px 4px rgba(0,0,0,0.32);
+} 

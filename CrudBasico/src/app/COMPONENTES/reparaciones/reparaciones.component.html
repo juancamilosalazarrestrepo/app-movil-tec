@@ -1,0 +1,46 @@
+<div class="dashboard">
+<div class="sidebar">
+  <h2>Agregar items</h2>
+ <button routerLink="/add" type="button" class="btn btn-dark boton">Agregar Nuevo cliente</button>
+ <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton">Agregar Administrador</button>
+ <h2>Listas</h2>
+ <button routerLink="/administradores" type="button" class="btn btn-dark boton">Lista de Administradores</button>
+ <button routerLink="/moviles" type="button" class="btn btn-dark boton">Lista de Moviles</button>
+ <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de reparaciones</button>
+
+ 
+
+
+</div>
+
+<div class="container">
+  
+  <div class="containerTable">
+    <h2 >Lista de reparaciones</h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id reparacion</th>
+          <th scope="col">id movil</th>
+          <th scope="col">descripcion</th>
+        
+      
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reparacion of ListarReparaciones">
+          <th>{{reparacion.id_reparaciones}}</th>
+          <td>{{reparacion.id_movil}}</td>
+          <td>{{reparacion.descripcion}}</td>
+        
+        
+       
+        </tr>
+
+      </tbody>
+   </table>
+
+  </div>
+</div>
+</div>

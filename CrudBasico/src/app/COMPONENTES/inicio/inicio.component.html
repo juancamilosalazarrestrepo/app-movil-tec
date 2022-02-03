@@ -1,15 +1,32 @@
-<div class="container">
-
+<div class="dashboard">
+<div class="sidebar">
+   <h2>Agregar items</h2>
   <button routerLink="/add" type="button" class="btn btn-dark boton">Agregar Nuevo cliente</button>
   <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton">Agregar Administrador</button>
+  <h2>Listas</h2>
+  <button routerLink="/administradores" type="button" class="btn btn-dark boton">Lista de Administradores</button>
+  <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de Moviles</button>
+  <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de reparaciones</button>
 
-  <p>Lista de Clientes</p>
+  
+
+
+</div>
+
+
+<div class="container">
+
+  
+
+  
 
  
   
+<div class="containerTable">
 
+  <h2>Lista de Clientes</h2>
   <table class="table">
-    <caption>Clientes</caption>
+    
     <thead>
       <tr>
         <th scope="col">Id</th>
@@ -42,62 +59,17 @@
     </tbody>
   </table>
 
-  <label >Lista de equipos moviles</label>
+</div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Id movil</th>
-        <th scope="col">id cliente</th>
-        <th scope="col">marca</th>
-        <th scope="col">modelo</th>
-      
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let movil of ListarMovil">
-        <th>{{movil.id_movil}}</th>
-        <td>{{movil.id_clientes}}</td>
-        <td>{{movil.marca}}</td>
-        <td>{{movil.modelo}}</td>
-        <td>
-          <button (click)="agregarReparacion(movil.id_movil ||'')"type="button" class="btn btn-primary">Agregar Reparacion</button>
-        </td>
-        
-       
-      </tr>
-
-    </tbody>
-  </table>
+  
 
 
-  <label >Lista de reparaciones</label>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Id reparacion</th>
-        <th scope="col">id movil</th>
-        <th scope="col">descripcion</th>
-        
-      
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let reparacion of ListarReparaciones">
-        <th>{{reparacion.id_reparaciones}}</th>
-        <td>{{reparacion.id_movil}}</td>
-        <td>{{reparacion.descripcion}}</td>
-        
-        
-       
-      </tr>
-
-    </tbody>
-  </table>
+  
 
  
 
 
+
+</div>
 
 </div>

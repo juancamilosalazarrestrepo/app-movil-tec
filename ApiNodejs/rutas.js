@@ -229,6 +229,31 @@ router.put('/:id',(req,res)=>{
             res.json({status:'cliente modificado'})
         }
     })
+}
+)
+router.get('/login',(req,res)=>{
+    let sql = 'select * from tb_usuarios'
+
+    conexion.query(sql,(err,rows,fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows)
+        }
+    })
 })
+
+router.get('/log/:username',(req,res)=>{
+    const {username}=req.params
+    let sql = 'select * from tb_usuarios where username = ?'
+    conexion.query(sql,[username],(err,rows,fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows)
+        
+    }
+    })
+})
+
+
 
 module.exports=router;

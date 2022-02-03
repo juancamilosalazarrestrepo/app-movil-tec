@@ -1,0 +1,27 @@
+<div class="fondo">
+<div class="container">
+<div class="loginform">
+
+    <form class="px-4 py-3">
+      <div class="mb-3">
+        <label for="exampleDropdownFormEmail1" class="form-label">Nombre de usuario</label>
+        <input type="text" [(ngModel)]="usuario.username"class="form-control" placeholder="username" name="username">
+      </div>
+      <div class="mb-3">
+        <label for="exampleDropdownFormPassword1" class="form-label">Contraseña</label>
+        <input type="password" [(ngModel)]="usuario.password_user" class="form-control" placeholder="password" name="password_user">
+      </div>
+      <div class="mb-3">
+        
+      </div>
+      <button  (click)="loguear()" class="btn btn-primary">Iniciar Sesion</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item"  routerLink="/addAdministrador" >¿Nuevo por aqui? Registrarse</a>
+    
+  
+</div>
+
+</div>
+
+</div>

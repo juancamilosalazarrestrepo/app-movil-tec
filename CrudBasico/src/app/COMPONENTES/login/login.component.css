@@ -1,6 +1,9 @@
 
 .fondo{
-    background-color: #fafafa !important;
+    /* background-color: #fafafa !important; */
+    background-image: url("../../../img/fondo2.jpg");
+    background-size: cover;
+    background-position:left bottom ;
     height: 100vh;
 }
 

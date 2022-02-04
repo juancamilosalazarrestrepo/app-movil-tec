@@ -1,49 +1,60 @@
 <div class="dashboard">
-<div class="sidebar">
-  <h2>Agregar items</h2>
-  <div class="separador"> </div>
- <button routerLink="/add" type="button" class="btn btn-dark boton">Agregar Nuevo cliente</button>
- <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton">Agregar Administrador</button>
- <h2>Listas</h2>
- <div class="separador"> </div>
- <button routerLink="/inicio" type="button" class="btn btn-dark boton">Lista de Clientes</button>
- <button routerLink="/administradores" type="button" class="btn btn-dark boton">Lista de Administradores</button>
- <button routerLink="/moviles" type="button" class="btn btn-dark boton">Lista de Moviles</button>
- <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de reparaciones</button>
-
- 
+  <div class="sidebar">
+    <h6>Agregar items</h6>
+    <div class="separador"> </div>
+    <button routerLink="/add" type="button" class="btn btn-dark boton"><i class="fas fa-user"></i>
+      Agregar Nuevo cliente</button>
+    <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton"><i class="fas fa-user-shield"></i>
+      Agregar Administrador</button>
 
 
-</div>
+    <h6>Listas</h6>
+    <div class="separador"> </div>
 
-<div class="container">
-  
-  <div class="containerTable">
-    <h2 >Lista de reparaciones</h2>
+    <button routerLink="/inicio" type="button" class="btn btn-dark boton"><i class="fas fa-users"></i>
+      Lista de Clientes</button>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Id reparacion</th>
-          <th scope="col">id movil</th>
-          <th scope="col">descripcion</th>
-        
-      
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let reparacion of ListarReparaciones">
-          <th>{{reparacion.id_reparaciones}}</th>
-          <td>{{reparacion.id_movil}}</td>
-          <td>{{reparacion.descripcion}}</td>
-        
-        
-       
-        </tr>
+    <button routerLink="/moviles" type="button" class="btn btn-dark boton"><i class="fas fa-mobile-alt"></i>
+      Lista de Moviles</button>
+    <button routerLink="/reparaciones" type="button" class="btn btn-dark boton"><i class="fas fa-tools"></i>
+      Lista de reparaciones</button>
 
-      </tbody>
-   </table>
+    <button routerLink="/administradores" type="button" class="btn btn-dark boton"><i class="fas fa-address-card"></i>
+      Lista de Administradores</button>
+
+
+
 
   </div>
-</div>
+
+  <div class="container">
+
+    <div class="containerTable">
+      <h4>Lista de reparaciones</h4>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id reparacion</th>
+            <th scope="col">id movil</th>
+            <th scope="col">descripcion</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reparacion of ListarReparaciones">
+            <th>{{reparacion.id_reparaciones}}</th>
+            <td>{{reparacion.id_movil}}</td>
+            <td>{{reparacion.descripcion}}</td>
+
+
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
 </div>

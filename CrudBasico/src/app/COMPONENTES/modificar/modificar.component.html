@@ -1,96 +1,108 @@
-
 <div class="dashboard">
     <div class="sidebar">
-       <h2>Agregar items</h2>
-       <div class="separador"> </div>
-      <button routerLink="/add" type="button" class="btn btn-dark boton">Agregar Nuevo cliente</button>
-      <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton">Agregar Administrador</button>
-      <h2>Listas</h2>
-      <div class="separador"> </div>
-      <button routerLink="/inicio" type="button" class="btn btn-dark boton">Lista de Clientes</button>
-      <button routerLink="/administradores" type="button" class="btn btn-dark boton">Lista de Administradores</button>
-      <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de Moviles</button>
-      <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de reparaciones</button>
-    
-      
-    
-    
-    </div>
-<div class="container">
-    <p>Agregar Equipo</p>
-    <div class="row">
-        <div class="col-sm-6">
-            <form>
-                <div class="mb-3">
-                    <label class="form-label">Nombre de Equipo</label>
-                    <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
+        <h6>Agregar items</h6>
+        <div class="separador"> </div>
+        <button routerLink="/add" type="button" class="btn btn-dark boton"><i class="fas fa-user"></i>
+            Agregar Nuevo cliente</button>
+        <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton"><i
+                class="fas fa-user-shield"></i>
+            Agregar Administrador</button>
 
 
-                </div>
+        <h6>Listas</h6>
+        <div class="separador"> </div>
 
-                <div>
+        <button routerLink="/inicio" type="button" class="btn btn-dark boton"><i class="fas fa-users"></i>
+            Lista de Clientes</button>
 
-                    <label class="form-label">telefono</label>
-                    <input [(ngModel)]="equipo.telefono" type="text" class="form-control" name="telefono">
+        <button routerLink="/moviles" type="button" class="btn btn-dark boton"><i class="fas fa-mobile-alt"></i>
+            Lista de Moviles</button>
+        <button routerLink="/reparaciones" type="button" class="btn btn-dark boton"><i class="fas fa-tools"></i>
+            Lista de reparaciones</button>
 
-                </div>
-                <div>
+        <button routerLink="/administradores" type="button" class="btn btn-dark boton"><i
+                class="fas fa-address-card"></i>
+            Lista de Administradores</button>
 
-                    <label class="form-label">correo</label>
-                    <input [(ngModel)]="equipo.correo" type="text" class="form-control" name="correo">
-
-                </div>
-                <div>
-
-                    <label class="form-label">cedula</label>
-                    <input [(ngModel)]="equipo.cedula" type="text" class="form-control" name="cedula">
-
-                </div>
-
-                <button (click)="modificar()" class="btn btn-primary">Guardar</button>
-
-
-            </form>
-
-        </div>
-        <div class="col-sm-6">
-            <form>
-
-
-                <div>
-
-                    <label class="form-label">{{equipo.nombre}}</label>
-
-
-                </div>
-                <div>
-
-                    <label class="form-label">{{equipo.telefono}}</label>
-
-
-                </div>
-                <div>
-
-                    <label class="form-label">{{equipo.correo}}</label>
-
-
-                </div>
-                <div>
-
-                    <label class="form-label">{{equipo.cedula}}</label>
-
-
-                </div>
-
-
-
-
-            </form>
-
-        </div>
 
 
 
     </div>
-</div>
+    <div class="container">
+        <p>Agregar Equipo</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre de Equipo</label>
+                        <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
+
+
+                    </div>
+
+                    <div>
+
+                        <label class="form-label">telefono</label>
+                        <input [(ngModel)]="equipo.telefono" type="text" class="form-control" name="telefono">
+
+                    </div>
+                    <div>
+
+                        <label class="form-label">correo</label>
+                        <input [(ngModel)]="equipo.correo" type="text" class="form-control" name="correo">
+
+                    </div>
+                    <div>
+
+                        <label class="form-label">cedula</label>
+                        <input [(ngModel)]="equipo.cedula" type="text" class="form-control" name="cedula">
+
+                    </div>
+
+                    <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+
+
+                </form>
+
+            </div>
+            <div class="col-sm-6">
+                <form>
+
+
+                    <div>
+
+                        <label class="form-label">{{equipo.nombre}}</label>
+
+
+                    </div>
+                    <div>
+
+                        <label class="form-label">{{equipo.telefono}}</label>
+
+
+                    </div>
+                    <div>
+
+                        <label class="form-label">{{equipo.correo}}</label>
+
+
+                    </div>
+                    <div>
+
+                        <label class="form-label">{{equipo.cedula}}</label>
+
+
+                    </div>
+
+
+
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+    </div>
 </div>

@@ -1,81 +1,85 @@
 <div class="dashboard">
-<div class="sidebar">
-   <h2>Agregar items</h2>
-   <div class="separador"> </div>
-  <button routerLink="/add" type="button" class="btn btn-dark boton">Agregar Nuevo cliente</button>
-  <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton">Agregar Administrador</button>
-  
-  
-  <h2>Listas</h2>
-  <div class="separador"> </div>
-  
-  <button routerLink="/inicio" type="button" class="btn btn-dark boton">Lista de Clientes</button>
-  <button routerLink="/administradores" type="button" class="btn btn-dark boton">Lista de Administradores</button>
-  <button routerLink="/moviles" type="button" class="btn btn-dark boton">Lista de Moviles</button>
-  <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de reparaciones</button>
-
-  
+  <div class="sidebar">
+    <h6>Agregar items</h6>
+    <div class="separador"> </div>
+    <button routerLink="/add" type="button" class="btn btn-dark boton"><i class="fas fa-user"></i>
+      Agregar Nuevo cliente</button>
+    <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton"><i class="fas fa-user-shield"></i>
+      Agregar Administrador</button>
 
 
-</div>
+    <h6>Listas</h6>
+    <div class="separador"> </div>
 
+    <button routerLink="/inicio" type="button" class="btn btn-dark boton"><i class="fas fa-users"></i>
+      Lista de Clientes</button>
 
-<div class="container">
+    <button routerLink="/moviles" type="button" class="btn btn-dark boton"><i class="fas fa-mobile-alt"></i>
+      Lista de Moviles</button>
+    <button routerLink="/reparaciones" type="button" class="btn btn-dark boton"><i class="fas fa-tools"></i>
+      Lista de reparaciones</button>
 
-  
-
-  
-
- 
-  
-<div class="containerTable">
-
-  <h2>Lista de Clientes</h2>
-  <table class="table">
-    
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Telefono</th>
-        <th scope="col">Correo</th>
-        <th scope="col">Cedula</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Eliminar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let equipo of ListarEquipo">
-        <th>{{equipo.id_clientes}}</th>
-        <td>{{equipo.nombre}}</td>
-        <td>{{equipo.telefono}}</td>
-        <td>{{equipo.correo}}</td>
-        <td>{{equipo.cedula}}</td>
-        <td>
-          <button (click)="agregarMovil(equipo.id_clientes ||'')"type="button" class="btn btn-primary">Agregar Movil</button>
-        </td>
-        <td>
-          <button (click)="modificar(equipo.id_clientes ||'')" type="button" class="btn btn-primary">Editar</button>
-        </td>
-        <td>
-          <button (click)="eliminar(equipo.id_clientes ||'')" type="button" class="btn btn-danger">Eliminar</button>
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-
-</div>
-
-  
-
-
-  
-
- 
+    <button routerLink="/administradores" type="button" class="btn btn-dark boton"><i class="fas fa-address-card"></i>
+      Lista de Administradores</button>
 
 
 
-</div>
+
+  </div>
+
+
+  <div class="container">
+
+
+    <div class="containerTable">
+
+      <h4>Lista de Clientes</h4>
+      <table class="table">
+
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Cedula</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let equipo of ListarEquipo">
+            <th>{{equipo.id_clientes}}</th>
+            <td>{{equipo.nombre}}</td>
+            <td>{{equipo.telefono}}</td>
+            <td>{{equipo.correo}}</td>
+            <td>{{equipo.cedula}}</td>
+            <td>
+              <button (click)="agregarMovil(equipo.id_clientes ||'')" type="button" class="btn btn-primary">Agregar
+                Movil</button>
+            </td>
+            <td>
+              <button (click)="modificar(equipo.id_clientes ||'')" type="button" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+              <button (click)="eliminar(equipo.id_clientes ||'')" type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
 
 </div>

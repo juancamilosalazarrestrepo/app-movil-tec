@@ -1,33 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 .sidebar{
     display: flex;
     flex-direction: column;
     
     align-items: center;
     padding-top: 30px;
-    width: 15%;
+    width: 300px;
     height: 100vh;
     background-color: #212529;
     color: #0077c0;
 }
+
+.boton{
+    display: flex;
+    width: 90% !important;
+    margin: 10px 0;
+    height: 50px;
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fas{
+    margin: 0 10px 0 0;
+}
+
 .separador{
     width: 90%;
     margin: 5px;
     height: 1px;
-    background-color: aliceblue;
-    color: aliceblue;
-}
-.boton{
-    width: 90% !important;
-    margin: 10px 0;
-    height: 100px;
-    border-radius: 10px;
+    background-color: #b1b1b1;
+    border-radius: 1px;
+    
 }
 
 .dashboard{
     display: flex;
+    font-family: 'Roboto', sans-serif !important;
+  
 }
 
-
+.container{
+    justify-self: center;
+}
 
  .containerTable{
     display: flex;
@@ -35,10 +50,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    width: 1000px;
+    /* width: 1000px; */
     background-color: #ffffff !important;
     padding: 40px !important;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 3px 24px 4px rgba(0,0,0,0.32); 
-box-shadow: 0px 3px 24px 4px rgba(0,0,0,0.32);
+    -webkit-box-shadow: -1px -1px 16px -8px rgba(0,0,0,0.85); 
+box-shadow: -1px -1px 16px -8px rgba(0,0,0,0.85);
 } 

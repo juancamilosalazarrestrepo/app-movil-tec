@@ -1,59 +1,70 @@
 <div class="dashboard">
   <div class="sidebar">
-    <h2>Agregar items</h2>
+    <h6>Agregar items</h6>
     <div class="separador"> </div>
-   <button routerLink="/add" type="button" class="btn btn-dark boton">Agregar Nuevo cliente</button>
-   <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton">Agregar Administrador</button>
-   <h2>Listas</h2>
-   <div class="separador"> </div>
-   <button routerLink="/inicio" type="button" class="btn btn-dark boton">Lista de Clientes</button>
-   <button routerLink="/administradores" type="button" class="btn btn-dark boton">Lista de Administradores</button>
-   <button routerLink="/moviles" type="button" class="btn btn-dark boton">Lista de Moviles</button>
-   <button routerLink="/reparaciones" type="button" class="btn btn-dark boton">Lista de reparaciones</button>
-  
-   
-  
-  
+    <button routerLink="/add" type="button" class="btn btn-dark boton"><i class="fas fa-user"></i>
+      Agregar Nuevo cliente</button>
+    <button routerLink="/addAdministrador" type="button" class="btn btn-dark boton"><i class="fas fa-user-shield"></i>
+      Agregar Administrador</button>
+
+
+    <h6>Listas</h6>
+    <div class="separador"> </div>
+
+    <button routerLink="/inicio" type="button" class="btn btn-dark boton"><i class="fas fa-users"></i>
+      Lista de Clientes</button>
+
+    <button routerLink="/moviles" type="button" class="btn btn-dark boton"><i class="fas fa-mobile-alt"></i>
+      Lista de Moviles</button>
+    <button routerLink="/reparaciones" type="button" class="btn btn-dark boton"><i class="fas fa-tools"></i>
+      Lista de reparaciones</button>
+
+    <button routerLink="/administradores" type="button" class="btn btn-dark boton"><i class="fas fa-address-card"></i>
+      Lista de Administradores</button>
+
+
+
+
   </div>
 
 
 
-<div class="container">
+  <div class="container">
 
-    
-  <div class="containerTable">
-    
-    
-  
-   
-    <h2>Lista de Administradores</h2>
-  
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Id Administrador</th>
-          <th scope="col">Nombre de usuario</th>
-          <th scope="col">contraseña</th>
-          <th scope="col">correo</th>
-        
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let administrador of ListarAdministradores">
-          <th>{{administrador.id_user}}</th>
-          <td>{{administrador.username}}</td>
-          <td>{{administrador.password_user}}</td>
-          <td>{{administrador.correo}}</td>
-          
-          
-         
-        </tr>
-  
-      </tbody>
-    </table>
-  
-  
-  
+
+    <div class="containerTable">
+
+
+
+
+      <h4>Lista de Administradores</h4>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id Administrador</th>
+            <th scope="col">Nombre de usuario</th>
+            <th scope="col">contraseña</th>
+            <th scope="col">correo</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let administrador of ListarAdministradores">
+            <th>{{administrador.id_user}}</th>
+            <td>{{administrador.username}}</td>
+            <td>{{administrador.password_user}}</td>
+            <td>{{administrador.correo}}</td>
+
+
+
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+    </div>
   </div>
-</div>
 </div>

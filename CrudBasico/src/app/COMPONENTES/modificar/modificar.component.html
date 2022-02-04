@@ -29,11 +29,11 @@
 
     </div>
     <div class="container">
-        <p>Agregar Equipo</p>
+        
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <form>
-                    <div class="mb-3">
+                    <div >
                         <label class="form-label">Nombre de Equipo</label>
                         <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
 
@@ -59,47 +59,13 @@
 
                     </div>
 
-                    <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+                    <button (click)="modificar()" class="btn btn-primary botonform">Guardar</button>
 
 
                 </form>
 
             </div>
-            <div class="col-sm-6">
-                <form>
-
-
-                    <div>
-
-                        <label class="form-label">{{equipo.nombre}}</label>
-
-
-                    </div>
-                    <div>
-
-                        <label class="form-label">{{equipo.telefono}}</label>
-
-
-                    </div>
-                    <div>
-
-                        <label class="form-label">{{equipo.correo}}</label>
-
-
-                    </div>
-                    <div>
-
-                        <label class="form-label">{{equipo.cedula}}</label>
-
-
-                    </div>
-
-
-
-
-                </form>
-
-            </div>
+           
 
 
 

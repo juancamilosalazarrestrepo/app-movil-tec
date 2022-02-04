@@ -16,6 +16,13 @@
     height: 100px;
     border-radius: 10px;
 }
+.separador{
+    width: 90%;
+    margin: 5px;
+    height: 1px;
+    background-color: aliceblue;
+    color: aliceblue;
+}
 
 .dashboard{
     display: flex;

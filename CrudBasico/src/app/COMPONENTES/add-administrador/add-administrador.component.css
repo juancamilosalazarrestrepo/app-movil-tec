@@ -9,7 +9,13 @@
     background-color: #212529;
     color: #0077c0;
 }
-
+.separador{
+    width: 90%;
+    margin: 5px;
+    height: 1px;
+    background-color: aliceblue;
+    color: aliceblue;
+}
 .boton{
     width: 90% !important;
     margin: 10px 0;

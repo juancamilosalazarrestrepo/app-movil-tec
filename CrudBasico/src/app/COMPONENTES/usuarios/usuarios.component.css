@@ -20,7 +20,13 @@
 .dashboard{
     display: flex;
 }
-
+.separador{
+    width: 90%;
+    margin: 5px;
+    height: 1px;
+    background-color: aliceblue;
+    color: aliceblue;
+}
 
 
  .containerTable{
